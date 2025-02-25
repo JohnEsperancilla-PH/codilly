@@ -1,73 +1,37 @@
 body {
     background-color: #121212;
-    color: #00ff00;
-    font-family: 'Fira Code', monospace;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-}
-.main-menu, .game-container, .loading-screen {
+    color: #00FF00;
+    font-family: "Fira Code", monospace;
     text-align: center;
 }
-button {
-    margin: 10px;
-    padding: 10px;
-    background: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-button:hover {
-    background: red;
-}
+
 .draggable {
-    padding: 10px;
-    margin: 5px;
-    background: #444;
-    display: inline-block;
     cursor: grab;
-}
-.drop-zone {
-    width: 200px;
-    height: 50px;
-    margin: 20px auto;
-    border: 2px dashed white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.loading-bar {
-    width: 100%;
-    height: 10px;
+    padding: 10px;
     background: #333;
-    margin-top: 10px;
-    position: relative;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 5px;
 }
-.progress {
-    width: 0;
-    height: 100%;
-    background: #00ff00;
-    animation: loading 5s linear forwards;
-}
-@keyframes loading {
-    0% { width: 0; }
-    100% { width: 100%; }
+
+.drop-zone {
+    border: 2px dashed #00FF00;
+    padding: 20px;
+    min-height: 50px;
+    margin-top: 20px;
 }
 
 .correct {
-    background: #00ff00;
-    transition: background 1s;
+    background-color: #008000;
 }
+
 .wrong {
-    color: red;
     animation: shake 0.5s;
-    text-shadow: 0 0 5px red;
+    background-color: red;
 }
+
 @keyframes shake {
     0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
+    25%, 75% { transform: translateX(-5px); }
     50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
 }
